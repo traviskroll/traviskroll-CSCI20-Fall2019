@@ -88,19 +88,20 @@ class twentyquestions{
   }
 //Starts the series of questions that calls a land, sea, or air function
   public static void Main (){
+    twentyquestions tq = new twentyquestions ();
     Console.WriteLine ("Would you like to Fly, Swim, or Run?");
-    A = Console.ReadLine ();
-    A = A.ToUpper ();
-    switch (A)
+     tq.A = Console.ReadLine ();
+     tq.A = tq.A.ToUpper ();
+    switch (tq.A)
     {
       case "FLY":
-          Air ();
+          tq.Air ();
           break;
       case "RUN":
-          Land ();
+          tq.Land ();
           break;
       case "SWIM":
-          Water ();
+          tq.Water ();
           break;
       default:
           Console.WriteLine("Invalid option");
