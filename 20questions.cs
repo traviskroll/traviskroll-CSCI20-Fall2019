@@ -1,36 +1,50 @@
 //Travis Kroll
-//9-17-19
-//This program will ask you a series of questions to tell you what kind of animal you could be
+//9-19-19
+//Asks a series of questions to the user to find out what kind of animal they are
 
-using system;
+using System;
+
 class twentyquestions{
 
   string A,B,C,c,b,a;
-
-  public static void Land ()
+//Runs through a series of questions that leads to a land animal
+  public void Land ()
   {
     Console.WriteLine ("Would you rather eat plants or animals?");
-    A = command.ToUpper (Console.ReadLine ());
+    A = Console.ReadLine ();
+    A = A.ToUpper ();
     if (A == "PLANTS")
     {
       Console.WriteLine ("Would you rather be big or small?");
-      a = command.ToUpper (Console.ReadLine ());
+      a = Console.ReadLine ();
+      a = a.ToUpper ();
         if (a == "BIG")
-        Console.WriteLine ();
+        Console.WriteLine ("You are a Giraffe!");
         else
+        Console.WriteLine ("You are a Koala Bear!");
     }
-    else{
-
+    else
+    {
+      Console.WriteLine ("Would you rather be big or small?");
+      a = Console.ReadLine ();
+      a = a.ToUpper ();
+        if (a == "BIG")
+        Console.WriteLine ("You are a Lion!");
+        else
+        Console.WriteLine ("You are a Snake!");
     }
   }
-  public static void Air ()
+// Runs through a series of questions that leads to a Airborne animal
+  public void Air ()
   {
     Console.WriteLine ("Would you rather eat plants or animals?");
-    B = command.ToUpper (Console.ReadLine ());
+    B = Console.ReadLine ();
+    B = B.ToUpper ();
     if (B == "PLANTS")
     {
       Console.WriteLine ("Would you rather be big or small?");
-      b = command.ToUpper (Console.ReadLine ());
+      b = Console.ReadLine ();
+      b = b.ToUpper ();
         if (b == "BIG")
         Console.WriteLine ("You Are A Duck!");
         else
@@ -38,39 +52,55 @@ class twentyquestions{
     }
     else{
       Console.WriteLine ("Would you rather be big or small?");
-      b = command.ToUpper (Console.ReadLine ());
+      b = Console.ReadLine ();
+      b = b.ToUpper ();
         if (b == "BIG")
+        Console.WriteLine ("You are an Eagle!");
+        else
+        Console.WriteLine ("You are a Hawk!");
     }
   }
-  public static void Water ()
+//Runs through the various questions towards a sea animal
+  public void Water ()
   {
     Console.WriteLine ("Would you rather eat plants or animals?");
-    C = command.ToUpper (Console.ReadLine ());
+    C = Console.ReadLine ();
+    C = C.ToUpper ();
     if (C == "PLANTS")
     {
       Console.WriteLine ("Would you rather be big or small?");
-      c = command.ToUpper (Console.ReadLine ());
+      c = Console.ReadLine ();
+      c = c.ToUpper ();
         if (b == "BIG")
-        Console.WriteLine ();
+        Console.WriteLine ("You are a Flatback Sea Turtle!");
         else
+        Console.WriteLine ("You are a Horseshoe crab!");
     }
     else{
-
+      Console.WriteLine ("Would you rather be big or small?");
+      c = Console.ReadLine ();
+      c = c.ToUpper ();
+        if (b == "BIG")
+        Console.WriteLine ("You are a Killer Whale!");
+        else
+        Console.WriteLine ("You are a Piranah!");
     }
   }
-  public static void main (){
+//Starts the series of questions that calls a land, sea, or air function
+  public static void Main (){
     Console.WriteLine ("Would you like to Fly, Swim, or Run?");
-    A = command.ToUpper (Console.ReadLine ());
+    A = Console.ReadLine ();
+    A = A.ToUpper ();
     switch (A)
     {
       case "FLY":
-          handleAir ();
+          Air ();
           break;
       case "RUN":
-          handleLand ();
+          Land ();
           break;
       case "SWIM":
-          handleWater ();
+          Water ();
           break;
       default:
           Console.WriteLine("Invalid option");
