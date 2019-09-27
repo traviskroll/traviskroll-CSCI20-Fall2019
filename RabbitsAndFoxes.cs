@@ -28,7 +28,7 @@ class FoxesAndRabbits {
     Rabbits = double.Parse(Console.ReadLine());
 
     //Running through calculations for my years
-    for(FutureYear=Year-2019;FutureYear>0;FutureYear=FutureYear-10)
+    for(FutureYear=Year-2019;FutureYear>0;FutureYear=FutureYear-3)
     {
       RabbitsForYear = (Rabbits)+(Rabbits*B_Rab)-(Rabbits*(Foxes*D_Rab));
       FoxesForYear = Foxes+(Foxes*(Rabbits*B_Fox))-(Foxes*D_Fox);
@@ -41,7 +41,7 @@ class FoxesAndRabbits {
       Console.WriteLine (Fox+" is the current population of foxes for that area in "+CurrentYear);
 
 
-      CurrentYear=CurrentYear+10;
+      CurrentYear=CurrentYear+3;
       Rabbits = RabbitsForYear;
       Foxes = FoxesForYear;
 
